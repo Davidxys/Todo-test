@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Todos</title>
+	<link rel="stylesheet" href="assets/todo.css">
+</head>
+<body>
+	<div id="todoapp">
+		<header id="header">
+			<h1>todos</h1>
+			<input type="text" id="new-todo" placeholder="需要做点什么？" autofoucus>
+
+			<section id="main">
+				<input type="checkbox" name="toggle-all" id="toggle-all">
+				<label for="toggle-all">标记全部完成</label>
+				<ul id="todo-list">			</ul>
+			</section>
+
+			<footer id="footer"></footer>
+		</header>
+	</div>
+
+	<div id="info">
+		<p>双击可以编辑任务ddddd</p>
+	</div>
+	<script type="text/template" id="item-template">
+		<div class="view">
+			<input type="checkbox" class="toggle" <%= completed ? 'checked' : '' %>>
+			<label><%= title %></label>
+		</div>
+	</script>
+
+	<script src="lib/jquery.js"></script>
+	<script src="lib/underscore.js"></script>
+	<script src="lib/backbone.js"></script>
+	<script src="lib/backbone.localStorage.js"></script>
+
+	<script src="js/Models/Todo.js"></script>
+	<script src="js/Collections/TodoCollection.js"></script>
+	<script src="js/Views/TodoView.js"></script>
+	<script src="js/Views/AppView.js"></script>
+	<script src="js/Routers/Router.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
